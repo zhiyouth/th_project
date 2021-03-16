@@ -10,17 +10,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TH_PROJECT'),
+        title: Text('2021先锋队'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'You have pushed the button this many times:',
-            ),
             StoreConnector<ReduxState, String>(
-              converter: (store) => store.state.toString(),
+              converter: (store) => '欢迎来到2021先锋队!',
               builder: (context, count) {
                 return Text(
                   count,
@@ -28,12 +25,12 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/LoginPage');
-              },
-              child: Text('点击去登录页面'),
-            )
+            // RaisedButton(
+            //   onPressed: () {
+            //     Navigator.pushNamed(context, '/LoginPage');
+            //   },
+            //   child: Text('点击去登录页面'),
+            // )
           ],
         ),
       ),

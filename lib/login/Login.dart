@@ -11,9 +11,9 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   bool passwordObscure = true;
   TextEditingController defaultUserEmail =
-      TextEditingController(text: 'tanghao@codemao.cn');
+      TextEditingController(text: 'tanghao');
   TextEditingController defaultUserPassword =
-      TextEditingController(text: 'RR6004rr');
+      TextEditingController(text: 'tanghao');
   String userPassword = '';
   String userEmail = '';
   final Map arguments;
@@ -53,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 8.0),
               Text(
-                '欢迎来到先锋团',
+                '欢迎来到2021先锋队',
                 style: TextStyle(
                   fontSize: 22.0,
                   fontWeight: FontWeight.w700,
@@ -97,7 +97,8 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     onTap: () {
-                      Navigator.pushNamed(context, '/FirstLoginPage');
+                      print('首次登录');
+                      // Navigator.pushNamed(context, '/FirstLoginPage');
                     },
                   ),
                   InkWell(
@@ -109,11 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     onTap: () {
-                      Navigator.pushNamed(
-                        context,
-                        '/ForgetPasswordPage',
-                        arguments: {'aa': '111'},
-                      );
+                      Navigator.pushNamed(context, '/ForgetPasswordPage');
                     },
                   ),
                 ],
@@ -124,7 +121,9 @@ class _LoginPageState extends State<LoginPage> {
                   child: RaisedButton(
                     color: Color.fromRGBO(233, 94, 91, 1),
                     child: Text('登录', style: TextStyle(color: Colors.white)),
-                    onPressed: login,
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/HomePage');
+                    },
                   ),
                 ),
               ])

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import '../Home.dart';
 import '../login/Login.dart';
+import '../login/ForgetPassword.dart';
 
 // 配置路由
 final routes = {
-  '/': (context) => HomePage(),
-  '/LoginPage': (context) => LoginPage(),
+  '/': (context) => LoginPage(),
+  '/HomePage': (context) => HomePage(),
+  '/ForgetPasswordPage': (context) => ForgetPasswordPage(),
 };
 
 // 实现namedRouter 传参
