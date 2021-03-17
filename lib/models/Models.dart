@@ -4,6 +4,18 @@ import '../util/MyStorage.dart';
 import '../util/MyToken.dart';
 
 class Models {
+  lolAccount() async {
+    String apiUrl = 'http://106.54.155.93:3000/lol-account';
+    try {
+      Dio dio = await MyDio().init();
+      Response response = await dio.get(apiUrl);
+      return response;
+    } catch (err) {
+      print(err);
+      return false;
+    }
+  }
+
   // 登录成功后，信息存入storage
   login({String userEmail, String userPassword}) async {
     String apiUrl =

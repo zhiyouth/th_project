@@ -25,12 +25,12 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
-            // RaisedButton(
-            //   onPressed: () {
-            //     Navigator.pushNamed(context, '/LoginPage');
-            //   },
-            //   child: Text('点击去登录页面'),
-            // )
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/LOLAccountPage');
+              },
+              child: Text('查看LOL账号'),
+            )
           ],
         ),
       ),
